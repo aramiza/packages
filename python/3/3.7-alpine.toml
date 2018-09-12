@@ -1,0 +1,21 @@
+image = "python:3.7-alpine"
+distro = "alpine"
+os = "linux"
+
+[options]
+interactive = true
+_mount = [
+  "type=volume,src=python-3.7-alpine-site-packages,dst=/usr/local/lib/python3.7/site-packages"
+]
+network = "host"
+
+[options.linux]
+user = "$(id -u $USER):$(id -g $USER)"
+
+[options.macos]
+user = "root"
+
+[apps]
+pip = ["/usr/local/bin/pip"]
+pydoc = ["/usr/local/bin/pydoc"]
+python = ["/usr/local/bin/python"]
