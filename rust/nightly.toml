@@ -1,0 +1,27 @@
+image = "rustlang/rust:nightly"
+distro = "debian"
+os = "linux"
+
+[options]
+# Cargo's local cache of the registry index and of git checkouts of crates
+_env = ["CARGO_HOME=/root/.cargo"]
+interactive = true
+_mount = [
+  # Create a volume to store Cargo's cache
+  "type=volume,src=rust-cargo-cache,dst=/root/.cargo",
+
+  # Create a volume to store rustup targets and components
+  "type=volume,src=rust-nightly-rustup,dst=/usr/local/rustup"
+]
+network = "host"
+user = "root"
+tty = true
+
+[apps]
+cargo = ["/usr/local/cargo/bin/cargo"]
+rustc = ["/usr/local/cargo/bin/rustc"]
+rustdoc = ["/usr/local/cargo/bin/rustdoc"]
+rustup = ["/usr/local/cargo/bin/rustup"]
+
+[rustup.options]
+tty = false
