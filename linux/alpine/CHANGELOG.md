@@ -7,5 +7,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.1.0] - 2018-09-15
 ### Added
 - Added the file `CHANGELOG.md` to communicate changes to this package
-- Added the file `1/1.28.toml` for Rust 1.28.0
-- Added the file `nightly.toml` for Rust nightly
+- Added the file `3/3.7.toml` for Alpine Linux 3.7
+- Added the file `3/3.8.toml` for Alpine Linux 3.8

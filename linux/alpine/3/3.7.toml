@@ -1,0 +1,12 @@
+image = "alpine:3.7"
+distro = "alpine"
+os = "linux"
+
+[options]
+
+[apps]
+# We leave the the command array empty so that `drexler alpine <command>` will
+# be passed through to the container unchanged. E.g.
+# - `drexler alpine ls` runs `ls` inside the container
+# - `drexler alpine cat /etc/os-release` displays the contents of /etc/os-release
+alpine = []
