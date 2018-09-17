@@ -1,0 +1,26 @@
+image = "ruby:latest"
+distro = "debian"
+os = "linux"
+
+[options]
+interactive = true
+network = "host"
+tty = true
+
+[options.linux]
+user = "$(id -u $USER):$(id -g $USER)"
+
+[options.macos]
+user = "root"
+
+[apps]
+bundle = ["/usr/local/bin/bundle"]
+bundler = ["/usr/local/bin/bundler"]
+erb = ["/usr/local/bin/erb"]
+gem = ["/usr/local/bin/gem"]
+irb = ["/usr/local/bin/irb"]
+rake = ["/usr/local/bin/rake"]
+rdoc = ["/usr/local/bin/rdoc"]
+ri = ["/usr/local/bin/ri"]
+ruby = ["/usr/local/bin/ruby"]
+update_rubygems = ["/usr/local/bin/ruby"]
