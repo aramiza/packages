@@ -1,0 +1,21 @@
+image = "jruby:9.2.0"
+distro = "debian"
+os = "linux"
+
+[options]
+interactive = true
+network = "host"
+tty = true
+
+[options.linux]
+user = "$(id -u $USER):$(id -g $USER)"
+
+[apps]
+bundle = ["/opt/jruby/bin/bundle"]
+bundler = ["/opt/jruby/bin/bundler"]
+gem = ["/opt/jruby/bin/gem"]
+irb = ["/opt/jruby/bin/irb"]
+rake = ["/opt/jruby/bin/rake"]
+rdoc = ["/opt/jruby/bin/rdoc"]
+ri = ["/opt/jruby/bin/ri"]
+ruby = ["/usr/local/bin/ruby"]
