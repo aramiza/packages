@@ -23,5 +23,5 @@ rustc = ["/usr/local/cargo/bin/rustc"]
 rustdoc = ["/usr/local/cargo/bin/rustdoc"]
 rustup = ["/usr/local/cargo/bin/rustup"]
 
-[rustup.options]
+[options.rustup]
 tty = false
