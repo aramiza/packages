@@ -1,0 +1,14 @@
+image = "hashicorp/packer:latest"
+distro = "alpine"
+os = "linux"
+
+[options]
+interactive = true
+_mount = [
+  "type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock"
+]
+network = "host"
+tty = true
+
+[apps]
+packer = ["/bin/packer"]
