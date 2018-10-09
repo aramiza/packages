@@ -1,0 +1,12 @@
+image = "centos:7.5.1804"
+distro = "centos"
+os = "linux"
+
+[options]
+
+[apps]
+# We leave the the command array empty so that `drexler centos <command>` will
+# be passed through to the container unchanged. E.g.
+# - `drexler centos ls` runs `ls` inside the container
+# - `drexler centos cat /etc/os-release` displays the contents of /etc/os-release
+centos = []
