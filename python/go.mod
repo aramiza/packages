@@ -1,1 +1,1 @@
-module github.com/aramiza/packages/python
+module drexler.sh/packages/python
